@@ -20,6 +20,9 @@
     <script type="module" src="Components/sh-project.js"></script>
     <script type="module" src="Components/sh-otherprojects.js"></script>
 
+    <script type="module" src="Components/sh-container.js"></script>
+
+
 
     <sh-hero></sh-hero>
     <sh-project></sh-project>

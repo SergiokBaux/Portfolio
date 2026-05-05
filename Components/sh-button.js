@@ -142,10 +142,10 @@ class SHButton extends HTMLElement {
 
       <!-- Botón principal del componente con $ {disabled ? "disabled" : "" revisamos si esta deshabilitado-->
       <button class="${type}" ${disabled ? "disabled" : ""}>
+          ${text}
           <span class="icon">
             <slot name="icon"></slot>
           </span>
-      ${text}
       </button>
     `;
 

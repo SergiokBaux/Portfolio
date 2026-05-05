@@ -25,12 +25,10 @@ class SH_Process extends HTMLElement{
 
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
-                align-items: stretch;
+                justify-content: space-between;
+                align-items: center;
                 
                 gap: 40px;
-
-                border: 1px solid aqua;
             }
             .Process_Container{
                 width: fit-content;
@@ -40,7 +38,6 @@ class SH_Process extends HTMLElement{
                 flex-direction: column;
                 gap: 28px;
 
-                border: 1px solid red;
             }
             .Title{
                 margin:0;
@@ -50,6 +47,43 @@ class SH_Process extends HTMLElement{
                 font-weight: var(--font-weight-semibold);
                 line-height:var(--line-height-display);
                 width: 100%;
+            }
+            .Information_Container{
+                width: fit-content;
+                min-height: 25vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+
+                gap: 20px;
+            }
+            .Card_Title{
+                text-align: center;
+                font-size: var(--font-size-h2);
+                line-height: var(--line-height-h2);
+                margin:0;
+                color: var(--color-tully-10);
+
+            }
+            .Paragraph{
+                text-align: center;
+                font-size: var(--font-size-h3);
+                line-height: var(--line-height-h3);
+                margin:0;
+                color: var(--color-tully-10);
+            }
+            .Icon_Container{
+                min-width: 48px;
+                min-height: 48px;
+                max-width: 60px;
+                max-height: 60px;
+            }
+            .Info{
+                display: flex;
+                flex-direction: column;
+                gap:16px;
             }
             @media (min-width: 1024px) {
                 .Cards_Container{
@@ -67,7 +101,11 @@ class SH_Process extends HTMLElement{
                 <div class="Process_Container">
                     <h1 class="Title">How I work?</h1>
                     <div class="Cards_Container">
-                        <sh-card title="Understand users" text="Explore users, context and constraints.">
+
+                    <!-- Information container 1 Understand users-->
+                    <sh-container>
+                        <div class="Information_Container">
+                            <div class="Icon_Container">
                             <svg 
                                 slot="icon" 
                                 viewBox="0 0 24 24" 
@@ -91,43 +129,63 @@ class SH_Process extends HTMLElement{
                                 <path d="M20.5 20.5L22 22"></path>
                                 <path d="M16 18.5C16 19.8807 17.1193 21 18.5 21C19.1916 21 19.8175 20.7192 20.2701 20.2654C20.7211 19.8132 21 19.1892 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5Z"></path>
                             </svg>
-                        </sh-card>
-                        <sh-card title="Design solutions" text="Translate insights into flows and interfaces.">
-                            <svg 
-                                slot="icon" 
-                                viewBox="0 0 24 24" 
-                                fill="none" 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                stroke="currentColor" 
-                                stroke-width="1.5" 
-                                stroke-linecap="round" 
-                                stroke-linejoin="round"
-                            >
-                                <path d="M20.5096 9.54C20.4243 9.77932 20.2918 9.99909 20.12 10.1863C19.9483 10.3735 19.7407 10.5244 19.5096 10.63C18.2796 11.1806 17.2346 12.0745 16.5002 13.2045C15.7659 14.3345 15.3733 15.6524 15.3696 17C15.3711 17.4701 15.418 17.9389 15.5096 18.4C15.5707 18.6818 15.5747 18.973 15.5215 19.2564C15.4682 19.5397 15.3588 19.8096 15.1996 20.05C15.0649 20.2604 14.8877 20.4403 14.6793 20.5781C14.4709 20.7158 14.2359 20.8085 13.9896 20.85C13.4554 20.9504 12.9131 21.0006 12.3696 21C11.1638 21.0006 9.97011 20.7588 8.85952 20.2891C7.74893 19.8194 6.74405 19.1314 5.90455 18.2657C5.06506 17.4001 4.40807 16.3747 3.97261 15.2502C3.53714 14.1257 3.33208 12.9252 3.36959 11.72C3.4472 9.47279 4.3586 7.33495 5.92622 5.72296C7.49385 4.11097 9.60542 3.14028 11.8496 3H12.3596C14.0353 3.00042 15.6777 3.46869 17.1017 4.35207C18.5257 5.23544 19.6748 6.49885 20.4196 8C20.6488 8.47498 20.6812 9.02129 20.5096 9.52V9.54Z"></path>
-                                <path d="M8 16.01L8.01 15.9989"></path>
-                                <path d="M6 12.01L6.01 11.9989"></path>
-                                <path d="M8 8.01L8.01 7.99889"></path>
-                                <path d="M12 6.01L12.01 5.99889"></path>
-                                <path d="M16 8.01L16.01 7.99889"></path>
-                            </svg>
-                        </sh-card>
-                        <sh-card title="Test & Improve" text="Prototype, test and refine solutions.">
-                            <svg 
-                            slot="icon" 
-                            viewBox="0 0 24 24" 
-                            fill="none" 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            stroke="currentColor" 
-                            stroke-width="1.5" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                        >
-                            <path d="M21.1679 8C19.6247 4.46819 16.1006 2 11.9999 2C6.81459 2 2.55104 5.94668 2.04932 11"></path>
-                            <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"></path>
-                            <path d="M2.88146 16C4.42458 19.5318 7.94874 22 12.0494 22C17.2347 22 21.4983 18.0533 22 13"></path>
-                            <path d="M7.04932 16H2.64932C2.31795 16 2.04932 16.2686 2.04932 16.6V21"></path>
-                            </svg>
-                        </sh-card>
+
+                        </div>
+                        <div class="Info">
+                            <h1 class="Card_Title">Understand users</h1>
+                            <p class="Paragraph">Explore users, context and constraints</p>
+                        </div>
+                        </div>
+                    </sh-container>
+
+                    <!-- Information container 2 Design solutions -->
+                    <sh-container>
+                        <div class="Information_Container">
+                                <div class="Icon_Container">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.5096 9.54C20.4243 9.77932 20.2918 9.99909 20.12 10.1863C19.9483 10.3735 19.7407 10.5244 19.5096 10.63C18.2796 11.1806 17.2346 12.0745 16.5002 13.2045C15.7659 14.3345 15.3733 15.6524 15.3696 17C15.3711 17.4701 15.418 17.9389 15.5096 18.4C15.5707 18.6818 15.5747 18.973 15.5215 19.2564C15.4682 19.5397 15.3588 19.8096 15.1996 20.05C15.0649 20.2604 14.8877 20.4403 14.6793 20.5781C14.4709 20.7158 14.2359 20.8085 13.9896 20.85C13.4554 20.9504 12.9131 21.0006 12.3696 21C11.1638 21.0006 9.97011 20.7588 8.85952 20.2891C7.74893 19.8194 6.74405 19.1314 5.90455 18.2657C5.06506 17.4001 4.40807 16.3747 3.97261 15.2502C3.53714 14.1257 3.33208 12.9252 3.36959 11.72C3.4472 9.47279 4.3586 7.33495 5.92622 5.72296C7.49385 4.11097 9.60542 3.14028 11.8496 3H12.3596C14.0353 3.00042 15.6777 3.46869 17.1017 4.35207C18.5257 5.23544 19.6748 6.49885 20.4196 8C20.6488 8.47498 20.6812 9.02129 20.5096 9.52V9.54Z"/>
+                                    <path d="M8 16.01L8.01 15.9989" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6 12.01L6.01 11.9989" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 8.01L8.01 7.99889" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 6.01L12.01 5.99889" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 8.01L16.01 7.99889" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+
+                                </div>
+                                <div class="Info">
+                                    <h1 class="Card_Title">Design solutions</h1>
+                                    <p class="Paragraph">Translate insights into flows and interfaces.</p>
+                                </div>
+                          </div>
+                    </sh-container>
+                    <!-- Information container 3 Test & Improve -->
+                    <sh-container>
+                        <div class="Information_Container">
+                            <div class="Icon_Container">
+                                    <svg 
+                                    slot="icon" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    stroke="currentColor" 
+                                    stroke-width="1.5" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M21.1679 8C19.6247 4.46819 16.1006 2 11.9999 2C6.81459 2 2.55104 5.94668 2.04932 11"></path>
+                                    <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"></path>
+                                    <path d="M2.88146 16C4.42458 19.5318 7.94874 22 12.0494 22C17.2347 22 21.4983 18.0533 22 13"></path>
+                                    <path d="M7.04932 16H2.64932C2.31795 16 2.04932 16.2686 2.04932 16.6V21"></path>
+                                    </svg>
+
+                                </div>
+                                <div class="Info">
+                                    <h1 class="Card_Title">Test & Improve</h1>
+                                    <p class="Paragraph">Prototype, test and refine solutions.</p>
+                            </div>
+                        </div>
+                    </sh-container>
+
 
                     </div>
                 </div>
