@@ -69,8 +69,8 @@ class SH_Process extends HTMLElement{
             }
             .Paragraph{
                 text-align: center;
-                font-size: var(--font-size-h3);
-                line-height: var(--line-height-h3);
+                font-size: var(--font-size-paragraph);
+                line-height: var(--line-height-paragraph);
                 margin:0;
                 color: var(--color-tully-10);
             }
